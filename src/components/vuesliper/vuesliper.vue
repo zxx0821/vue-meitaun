@@ -79,7 +79,7 @@
   box-sizing: border-box;
   width:100%;
   height:150px;
-  margin:0 auto;
+  margin:0 auto 10px auto;
   /*overflow: hidden;*/
   position:relative;
   .slideshow{

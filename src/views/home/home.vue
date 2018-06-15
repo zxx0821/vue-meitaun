@@ -4,6 +4,7 @@
     </headerTop>
     <vuesliper></vuesliper>
     <navbarTab></navbarTab>
+    <lineNav></lineNav>
   </div>
 </template>
 
@@ -11,6 +12,7 @@
   import headerTop from '../../components/homeheaderTop/homeheaderTop';
   import vuesliper from '../../components/vuesliper/vuesliper';
   import navbarTab from '../../components/navbarTab/navbarTab';
+  import lineNav from '../../components/navbarTab/lineNav';
     export default {
       name: "home",
       data(){
@@ -25,7 +27,8 @@
       components: {
         headerTop,
         vuesliper,
-        navbarTab
+        navbarTab,
+        lineNav
       },
       computed:{
 

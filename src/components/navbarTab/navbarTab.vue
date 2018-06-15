@@ -2,16 +2,16 @@
     <div id="navTab">
       <ul class="mainNav">
         <router-link tag="li" to="" v-for="(item, index) in navTabtop" :key="index" class="routerPath">
-          <span><i class="fa" :class="item.icon"></i></span>
-          <p>{{item.title}}</p>
+          <span :style="{background:item.color}"><i class="fa" :class="item.icon"></i></span>
+          <p class="title">{{item.title}}</p>
         </router-link>
       </ul>
-      <ul class="motherNav">
+      <!--<ul class="motherNav">
         <router-link tag="li" to="" v-for="(item, index) in othernav" :key="index" class="routerPath">
           <i class="fa" :class="item.icon"></i>
           <p>{{item.title}}</p>
         </router-link>
-      </ul>
+      </ul>-->
     </div>
 </template>
 
@@ -24,22 +24,27 @@
           navTabtop:[
             {
               icon: 'fa-plane',
+              color: 'orange',
               title: "美食"
             },
             {
               icon: 'fa-car',
+              color: 'burlywood',
               title: "电影/演出"
             },
             {
               icon: 'fa-bank',
+              color: 'orangered',
               title: '酒店住宿'
             },
             {
               icon: 'fa-subway',
+              color: 'cadetblue',
               title: "休闲娱乐"
             },
             {
               icon: 'fa-anchor',
+              color: 'lightcoral',
               title: "外卖"
             }
           ],
@@ -89,6 +94,11 @@
       },
       methods: {
 
+      },
+      computed: {
+        color(){
+          return "color=red"
+        }
       }
     }
 </script>
@@ -97,26 +107,32 @@
 #navTab{
   .mainNav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
+    padding-bottom: 20px;
+    margin:0 20px;
+    border-bottom: 1px solid #ccc;
     .routerPath{
       flex: 1;
       span{
+        position:relative;
         display: inline-block;
         width:40px;
         height:40px;
         border-radius: 20px;
         background:#ccc;
-        position:relative;
         .fa{
           display: inline-block;
-          font-size: 20px;
           position:absolute;
           left:50%;
           top:50%;
           transform:translate(-50%,-50%);
-
+          font-size: 20px;
+          color:#fff;
         }
+      }
+      .title{
+        font-size:14px;
       }
     }
   }
