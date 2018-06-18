@@ -6,7 +6,7 @@ import router from './router'
 import store from './store'
 import 'font-awesome/css/font-awesome.min.css'
 Vue.config.productionTip = false;
-
+import './assets/css/index.less'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -14,4 +14,4 @@ new Vue({
   store,
   components: { App },
   template: '<App/>'
-})
+});
